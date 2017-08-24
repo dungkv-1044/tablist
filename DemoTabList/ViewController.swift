@@ -50,23 +50,29 @@ class ViewController: UIViewController {
         tempIndex -= 1
         let temp = tempIndex + 1
         let temp2 = tempIndex - 1
-        if tempIndex == currentMonthIndex {
-            lbPreveousMonth.text = month[tempIndex-1] + "/" + currentYear
-            lbCurrentMonth.text = "THIS MONTH"
+        if tempIndex == 1 {
+            lbPreveousMonth.text = ""
+            lbCurrentMonth.text = month[tempIndex] + "/" + currentYear
             lbNextMonth.text =  month[tempIndex+1] + "/" + currentYear
         } else {
-            if temp == currentMonthIndex {
-                lbNextMonth.text = "THIS MONTH"
-                lbCurrentMonth.text = month[tempIndex] + "/" + currentYear
-                lbPreveousMonth.text =  month[tempIndex-1] + "/" + currentYear
+            if tempIndex == currentMonthIndex {
+                lbPreveousMonth.text = month[tempIndex-1] + "/" + currentYear
+                lbCurrentMonth.text = "THIS MONTH"
+                lbNextMonth.text =  month[tempIndex+1] + "/" + currentYear
             } else {
-                if temp2 == currentMonthIndex {
-                    lbPreveousMonth.text =  "THIS MONTH"
-                } else {
+                if temp == currentMonthIndex {
+                    lbNextMonth.text = "THIS MONTH"
+                    lbCurrentMonth.text = month[tempIndex] + "/" + currentYear
                     lbPreveousMonth.text =  month[tempIndex-1] + "/" + currentYear
+                } else {
+                    if temp2 == currentMonthIndex {
+                        lbPreveousMonth.text =  "THIS MONTH"
+                    } else {
+                        lbPreveousMonth.text =  month[tempIndex-1] + "/" + currentYear
+                    }
+                    lbNextMonth.text = month[tempIndex+1] + "/" + currentYear
+                    lbCurrentMonth.text = month[tempIndex] + "/" + currentYear
                 }
-                lbNextMonth.text = month[tempIndex+1] + "/" + currentYear
-                lbCurrentMonth.text = month[tempIndex] + "/" + currentYear
             }
         }
         
@@ -80,23 +86,29 @@ class ViewController: UIViewController {
         print("Next: \(tempIndex)")
         let temp = tempIndex - 1
         let temp2 = tempIndex + 1
-        if tempIndex == currentMonthIndex {
+        if tempIndex == 12 {
             lbPreveousMonth.text = month[tempIndex-1] + "/" + currentYear
-            lbCurrentMonth.text = "THIS MONTH"
-            lbNextMonth.text =  month[tempIndex+1] + "/" + currentYear
+            lbCurrentMonth.text = month[tempIndex] + "/" + currentYear
+            lbNextMonth.text =  ""
         } else {
-            if temp == currentMonthIndex {
-                lbPreveousMonth.text = "THIS MONTH"
-                lbCurrentMonth.text = month[tempIndex] + "/" + currentYear
+            if tempIndex == currentMonthIndex {
+                lbPreveousMonth.text = month[tempIndex-1] + "/" + currentYear
+                lbCurrentMonth.text = "THIS MONTH"
                 lbNextMonth.text =  month[tempIndex+1] + "/" + currentYear
             } else {
-                if temp2 == currentMonthIndex {
-                    lbNextMonth.text =  "THIS MONTH"
-                } else {
+                if temp == currentMonthIndex {
+                    lbPreveousMonth.text = "THIS MONTH"
+                    lbCurrentMonth.text = month[tempIndex] + "/" + currentYear
                     lbNextMonth.text =  month[tempIndex+1] + "/" + currentYear
+                } else {
+                    if temp2 == currentMonthIndex {
+                        lbNextMonth.text =  "THIS MONTH"
+                    } else {
+                        lbNextMonth.text =  month[tempIndex+1] + "/" + currentYear
+                    }
+                    lbPreveousMonth.text = month[tempIndex-1] + "/" + currentYear
+                    lbCurrentMonth.text = month[tempIndex] + "/" + currentYear
                 }
-                lbPreveousMonth.text = month[tempIndex-1] + "/" + currentYear
-                lbCurrentMonth.text = month[tempIndex] + "/" + currentYear
             }
         }
         

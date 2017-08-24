@@ -21,50 +21,73 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2hk-1W-c5I">
-                                <rect key="frame" x="0.0" y="64" width="375" height="40"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gMl-z6-Zxh">
+                                <rect key="frame" x="0.0" y="64" width="375" height="41"/>
                                 <subviews>
-                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Previous" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAP-5C-dNy">
-                                        <rect key="frame" x="0.0" y="0.0" width="125" height="40"/>
-                                        <color key="backgroundColor" red="0.40784313729999999" green="0.77804129460000004" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <gestureRecognizers/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2hk-1W-c5I">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Previous" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAP-5C-dNy">
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="40"/>
+                                                <color key="backgroundColor" red="0.40784313729999999" green="0.77804129460000004" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <gestureRecognizers/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="sj8-Mr-ZfH" appends="YES" id="GLW-fs-hPu"/>
+                                                </connections>
+                                            </label>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r14-4m-p7j">
+                                                <rect key="frame" x="125" y="0.0" width="125" height="40"/>
+                                                <color key="backgroundColor" red="0.40784313729999999" green="0.77804129460000004" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <gestureRecognizers/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cuM-lI-JMo">
+                                                <rect key="frame" x="250" y="0.0" width="125" height="40"/>
+                                                <color key="backgroundColor" red="0.40784313729999999" green="0.77804129460000004" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <gestureRecognizers/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="5y1-ip-zO1" appends="YES" id="eC8-A4-yTe"/>
+                                                </connections>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="att-cX-yEA">
+                                        <rect key="frame" x="375" y="40" width="0.0" height="1"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="JqV-qW-sn3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="sj8-Mr-ZfH" appends="YES" id="GLW-fs-hPu"/>
-                                        </connections>
-                                    </label>
-                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r14-4m-p7j">
-                                        <rect key="frame" x="125" y="0.0" width="125" height="40"/>
-                                        <color key="backgroundColor" red="0.40784313729999999" green="0.77804129460000004" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <gestureRecognizers/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cuM-lI-JMo">
-                                        <rect key="frame" x="250" y="0.0" width="125" height="40"/>
-                                        <color key="backgroundColor" red="0.40784313729999999" green="0.77804129460000004" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <gestureRecognizers/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="5y1-ip-zO1" appends="YES" id="eC8-A4-yTe"/>
-                                        </connections>
                                     </label>
                                 </subviews>
+                                <color key="backgroundColor" red="0.40784313729999999" green="0.77804129460000004" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="QEZ-qH-rEe"/>
+                                    <constraint firstItem="att-cX-yEA" firstAttribute="top" secondItem="2hk-1W-c5I" secondAttribute="bottom" id="3LL-v4-4oA"/>
+                                    <constraint firstAttribute="bottom" secondItem="att-cX-yEA" secondAttribute="bottom" id="3Nd-zZ-ieR"/>
+                                    <constraint firstItem="2hk-1W-c5I" firstAttribute="top" secondItem="gMl-z6-Zxh" secondAttribute="top" id="Cwf-Bt-BVT"/>
+                                    <constraint firstItem="2hk-1W-c5I" firstAttribute="leading" secondItem="gMl-z6-Zxh" secondAttribute="leading" id="DKA-PB-dSl"/>
+                                    <constraint firstItem="att-cX-yEA" firstAttribute="centerX" secondItem="gMl-z6-Zxh" secondAttribute="centerX" id="GP1-7a-hsj"/>
+                                    <constraint firstItem="att-cX-yEA" firstAttribute="width" secondItem="r14-4m-p7j" secondAttribute="width" id="Ih1-dc-cIW"/>
+                                    <constraint firstAttribute="height" constant="41" id="kXT-2H-Bls"/>
+                                    <constraint firstAttribute="trailing" secondItem="2hk-1W-c5I" secondAttribute="trailing" id="vR6-Ih-Us9"/>
                                 </constraints>
-                            </stackView>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.30588235289999999" green="0.41176470590000003" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="2hk-1W-c5I" secondAttribute="trailing" id="g8v-Tw-vdZ"/>
-                            <constraint firstItem="2hk-1W-c5I" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="w81-7a-lKG"/>
-                            <constraint firstItem="2hk-1W-c5I" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="x6g-QQ-wLK"/>
+                            <constraint firstItem="gMl-z6-Zxh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="3Od-eb-h2O"/>
+                            <constraint firstAttribute="trailing" secondItem="gMl-z6-Zxh" secondAttribute="trailing" id="SHx-dD-RSm"/>
+                            <constraint firstItem="gMl-z6-Zxh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Xjt-ZT-CC3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ptH-xf-VyH"/>
@@ -86,7 +109,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1078" y="98"/>
+            <point key="canvasLocation" x="1077.5999999999999" y="97.601199400299862"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7Sy-pA-uvE">
